@@ -1,0 +1,28 @@
+meta {
+  name: Crear Producto
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:3000/products
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "Camiseta Blanca",
+    "description": "Camiseta básica blanca",
+    "image": "https://via.placeholder.com/150",
+    "category": "Camisetas",
+    "size": "M",
+    "price": 19.99
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
