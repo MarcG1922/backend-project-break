@@ -1,0 +1,30 @@
+meta {
+  name: cloudinary
+  type: http
+  seq: 11
+}
+
+post {
+  url: http://127.0.0.1:3000/api/products
+  body: multipartForm
+  auth: inherit
+}
+
+headers {
+  Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5OWIzZWQyZGFmZWJlZjc2ZWUwYTU5MyIsImlhdCI6MTc3MTc4MTg4MywiZXhwIjoxNzcxODY4MjgzfQ.elfqAZkevszulOIdz9eo_2p0L3u55HClYzFRGSyVh4M
+  Content-Type: application/json
+}
+
+body:multipart-form {
+  name: Camiseta Azul @contentType(Text)
+  description: Camiseta de algodón @contentType(Text)
+  category: Camisetas @contentType(Text)
+  size: M @contentType(Text)
+  price: 30 @contentType(Text)
+  image: @file(C:\Users\marc2\OneDrive\Escritorio\camiseta.jpg) @contentType(File)
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

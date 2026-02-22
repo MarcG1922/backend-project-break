@@ -1,0 +1,45 @@
+meta {
+  name: cloudinary2
+  type: http
+  seq: 12
+}
+
+post {
+  url: http://127.0.0.1:3000/api/products?Authorization=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5OWIzZWQyZGFmZWJlZjc2ZWUwYTU5MyIsImlhdCI6MTc3MTc4MTg4MywiZXhwIjoxNzcxODY4MjgzfQ.elfqAZkevszulOIdz9eo_2p0L3u55HClYzFRGSyVh4M
+  body: json
+  auth: inherit
+}
+
+params:query {
+  Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5OWIzZWQyZGFmZWJlZjc2ZWUwYTU5MyIsImlhdCI6MTc3MTc4MTg4MywiZXhwIjoxNzcxODY4MjgzfQ.elfqAZkevszulOIdz9eo_2p0L3u55HClYzFRGSyVh4M
+}
+
+headers {
+  Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5OWIzZWQyZGFmZWJlZjc2ZWUwYTU5MyIsImlhdCI6MTc3MTc4MTg4MywiZXhwIjoxNzcxODY4MjgzfQ.elfqAZkevszulOIdz9eo_2p0L3u55HClYzFRGSyVh4M
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "name": "Camiseta Azul",
+    "description": "Camiseta 100% algodón",
+    "category": "Camisetas",
+    "size": "M",
+    "price": 25,
+    "image": "https://tse3.mm.bing.net/th/id/OIP.mX2Vd-RN-dJEV0uUYJL00QHaJk?pid=Api&P=0&h=180"
+  }
+}
+
+body:multipart-form {
+  name: Camiseta Azul @contentType(Text)
+  description: 100% algodón @contentType(Text)
+  category: Camisetas @contentType(Text)
+  size: M @contentType(Text)
+  price: 25 @contentType(Text)
+  image: https://tse3.mm.bing.net/th/id/OIP.mX2Vd-RN-dJEV0uUYJL00QHaJk?pid=Api&P=0&h=180 @contentType(File)
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

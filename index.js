@@ -15,6 +15,12 @@ app.use(methodOverride('_method'));
 const productRoutes = require('./routes/productRoutes');
 app.use('/', productRoutes);
 
+const authRoutes = require('./routes/authRoutes');
+app.use('/api/auth', authRoutes);
+
+const apiProductRoutes = require('./routes/apiProductRoutes');
+app.use('/api', apiProductRoutes);
+
 app.get('/', (req, res) => {
   res.send('<h1>Servidor funcionando</h1>');
 });

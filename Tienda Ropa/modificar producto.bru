@@ -1,0 +1,27 @@
+meta {
+  name: modificar producto
+  type: http
+  seq: 9
+}
+
+put {
+  url: http://localhost:3000/api/products/699b41678d99da54dadc1b8b
+  body: json
+  auth: inherit
+}
+
+headers {
+  Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5OWIzZWQyZGFmZWJlZjc2ZWUwYTU5MyIsImlhdCI6MTc3MTc4MTg4MywiZXhwIjoxNzcxODY4MjgzfQ.elfqAZkevszulOIdz9eo_2p0L3u55HClYzFRGSyVh4M
+}
+
+body:json {
+  {
+    "price": 30,
+    "size": "L"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

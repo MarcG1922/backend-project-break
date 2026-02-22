@@ -1,0 +1,31 @@
+meta {
+  name: sin token
+  type: http
+  seq: 8
+}
+
+post {
+  url: http://localhost:3000/api/products
+  body: json
+  auth: inherit
+}
+
+headers {
+  Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5OWIzZWQyZGFmZWJlZjc2ZWUwYTU5MyIsImlhdCI6MTc3MTc4MTg4MywiZXhwIjoxNzcxODY4MjgzfQ.elfqAZkevszulOIdz9eo_2p0L3u55HClYzFRGSyVh4M
+}
+
+body:json {
+  {
+    "name": "Camiseta Negra",
+    "description": "Camiseta 100% algodón",
+    "image": "https://via.placeholder.com/200",
+    "category": "Camisetas",
+    "size": "M",
+    "price": 25
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

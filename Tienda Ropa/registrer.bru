@@ -1,0 +1,24 @@
+meta {
+  name: registrer
+  type: http
+  seq: 6
+}
+
+post {
+  url: http://localhost:3000/api/auth/register
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "Marc",
+    "email": "marc@email.com",
+    "password": "123456"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
